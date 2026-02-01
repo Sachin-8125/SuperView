@@ -104,6 +104,76 @@ body {
   opacity: 0.6;
 }
 
+.resume-upload-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.file-upload-label {
+  cursor: pointer;
+  margin: 0;
+}
+
+.file-upload-input {
+  position: absolute;
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.btn-outline {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  color: var(--primary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+}
+
+.file-upload-label:hover .btn-outline {
+  background: var(--primary);
+  color: white;
+}
+
+.resume-file-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  background: var(--bg-light);
+  padding: 0.35rem 0.5rem;
+  border-radius: 6px;
+}
+
+.clear-file-btn {
+  background: none;
+  border: none;
+  color: var(--text-light);
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 0.25rem;
+  margin-left: 0.25rem;
+}
+
+.clear-file-btn:hover {
+  color: var(--danger);
+}
+
+.input-hint {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin: 0 0 0.5rem 0;
+}
+
 /* Buttons */
 .btn {
   padding: 0.75rem 1.5rem;

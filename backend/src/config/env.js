@@ -1,4 +1,4 @@
-const requiredEnvVars = ['ANTHROPIC_API_KEY'];
+const requiredEnvVars = ['GEMINI_API_KEY'];
 
 const optionalEnvVars = {
   NODE_ENV: 'development',
@@ -29,7 +29,7 @@ const getConfig = () => {
     port: parseInt(process.env.PORT) || optionalEnvVars.PORT,
     corsOrigin: process.env.CORS_ORIGIN || optionalEnvVars.CORS_ORIGIN,
     logLevel: process.env.LOG_LEVEL || optionalEnvVars.LOG_LEVEL,
-    anthropicKey: process.env.ANTHROPIC_API_KEY,
+    geminiApiKey: process.env.GEMINI_API_KEY,
     databaseUrl: process.env.DATABASE_URL || optionalEnvVars.DATABASE_URL,
     jwtSecret: process.env.JWT_SECRET || optionalEnvVars.JWT_SECRET,
     sessionTimeout: parseInt(process.env.SESSION_TIMEOUT) || optionalEnvVars.SESSION_TIMEOUT,

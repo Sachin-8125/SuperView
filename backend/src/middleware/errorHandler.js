@@ -6,10 +6,11 @@ const errorHandler = (err, req, res, next) => {
     method: req.method
   });
 
-  if (err.message && err.message.includes('Claude API')) {
+  if (err.message && (err.message.includes('Claude API') || err.message.includes('AI Service'))) {
     return res.status(503).json({
       error: 'AI Service temporarily unavailable',
-      message: 'Please try again in a moment'
+      message: process.env.NODE_ENV === 'development' ? err.message : 'Please try again in a moment',
+      ...(process.env.NODE_ENV === 'development' && { details: err.stack })
     });
   }
 
